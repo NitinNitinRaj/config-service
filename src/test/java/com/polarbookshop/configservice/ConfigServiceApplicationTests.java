@@ -23,7 +23,7 @@ class ConfigServiceApplicationTests {
   @Test
   void defaultConfigurationAvailable() {
     ResponseEntity<Environment> entity = restTemplate.getForEntity(
-      "/application/default",
+      "/catalog-service/default",
       Environment.class
     );
     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
